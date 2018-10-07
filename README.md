@@ -18,6 +18,7 @@ Install Laravel using Composer by executing this command
 
 composer global require "laravel/installer"
 
+
 ### Setting up the project
 
 Just follow these steps to host the project locally. This will enable you to run and debug the code.
