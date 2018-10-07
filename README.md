@@ -34,12 +34,14 @@ Just follow these steps to host the project locally. This will enable you to run
 
 5. Execute composer install to automatically install all of the project dependencies
 
-6. cd to frontend folder, then run npm install
+6. then run npm install
 
-7. Run npm run serve 
+7. Run php artisan key:generate
+
+8. run npm run serve 
     > The default root URL of the application will be http://localhost:8000. 
 
-8. Start your apache and mysql
+9. Start your apache and mysql
    
 
 
