@@ -69,11 +69,9 @@ class RegisterController extends Controller
         $name = request('name');
         $email = request('email');
         $password = request('password');
-
         $exist = User::where('email', $email)->exists();
         if ($exist)
             throw new BadRequestHttpException('Duplicate Email');
-
 
         $id = guid();
         $user = new User();

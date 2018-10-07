@@ -1,20 +1,14 @@
 <template>
     <div id="layout-template">
             <Layout>
-            <Header>
-                <Menu mode="horizontal" theme="dark" active-name="1">
-                    <div class="layout-logo"></div>
-                    <div class="layout-nav">
-                      
-                    </div>
-                </Menu>
+            <Header id='layout-h'>
             </Header>
             <Content :style="{padding: '0 50px'}">
                 <Breadcrumb :style="{margin: '20px 0'}">
                     <BreadcrumbItem>Registration</BreadcrumbItem>
                 </Breadcrumb>
                 <Card>
-                    <div style="min-height: 200px;">
+                    <div style="min-height: 250px;">
                         <form-template></form-template>
                     </div>
                 </Card>
@@ -44,5 +38,8 @@ export default {
         top: 0;
         z-index: 999;
         
+    }
+    #layout-h {
+        background-color: #0091EA;
     }
 </style>

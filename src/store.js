@@ -11,11 +11,13 @@ export default new Vuex.Store({
   state: {
     name: '',
     password: '',
-    email: 'email@exampple.com',
+    email: '',
+    confirmPassword: '',
     regsitrationData: {
       name: '',
       password: '',
-      email: ''
+      email: '',
+      confirmPassword: ''
     }
   },
   mutations: {
@@ -24,6 +26,9 @@ export default new Vuex.Store({
     },
     setPassword(state, v) {
       state.regsitrationData.password = v;
+    },
+    setConfirmPassword(state, v) {
+      state.regsitrationData.confirmPassword = v;
     },
     setEmail(state, v) {
       state.regsitrationData.email = v;
@@ -35,7 +40,7 @@ export default new Vuex.Store({
         axios.post('http://localhost/appetiser/public/api/register', state.regsitrationData).then(function(res) {
           resolve(res.data)
         }).catch(error=> {
-          reject(error)
+          reject(error.data)
         })
       })
     }
