@@ -20,7 +20,8 @@ composer global require "laravel/installer"
 
 ### Setting up the project
 
-A step by step series of examples that tell you how to get a development env running
+Just follow these steps to host the project locally. This will enable you to run and debug the code.
+
 
 1. Clone this repository.
 
@@ -35,5 +36,9 @@ A step by step series of examples that tell you how to get a development env run
 6. cd to frontend folder, then run npm install
 
 7. Run npm run serve 
+    > The default root URL of the application will be http://localhost:8000. 
+
+8. Start your apache and mysql
+   
 
 
