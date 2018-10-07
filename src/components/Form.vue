@@ -20,7 +20,12 @@ export default {
   name: "Form",
   methods: {
       register() {
-          this.$store.dispatch('onSubmit');
+          this.$store.dispatch('onSubmit').then(result => {
+              if (result.success) 
+                this.$Message.success('Successfully Registered');
+          }).catch(err=>{
+              this.$Message.error('Duplicate Email');
+          } )
       }
   },
   computed: {

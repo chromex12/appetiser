@@ -33,7 +33,9 @@ export default new Vuex.Store({
     onSubmit({state}) {
       return new Promise((resolve, reject)=> {
         axios.post('http://localhost/appetiser/public/api/register', state.regsitrationData).then(function(res) {
-          return res.data
+          resolve(res.data)
+        }).catch(error=> {
+          reject(error)
         })
       })
     }

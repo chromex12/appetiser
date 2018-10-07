@@ -72,10 +72,8 @@ class RegisterController extends Controller
 
         $exist = User::where('email', $email)->exists();
         if ($exist)
-            return response()->json([
-                'success' => false,
-                'message' => 'Duplicate Email'
-            ]);
+            throw new BadRequestHttpException('Duplicate Email');
+
 
         $id = guid();
         $user = new User();
